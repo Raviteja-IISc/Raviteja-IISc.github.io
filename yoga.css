@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif ;
+    box-sizing: border-box;
+}
+
+body{
+    background: #080808;
+    color: #fff ;
+    
+    }
+
+h1{
+    background-color: rebeccapurple;
+    font-size: 3rem;
+}
+h2{
+    background-color: rebeccapurple;
+    font-size: 2rem;
+}
+header img{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+h3{
+    background-color: skyblue;
+    font-size: 2rem;
+    
+    
+}
+ul li{
+    background-color: wheat;
+    font-size: 1rem;
+    font-style: normal;
+    color: green;
+    font-weight: 1000;
+    
+}
+.Meeting{
+    background-color: red;
+    font-size: 2rem;
+    margin-bottom: 10px;
+
+}
+
+
+.link
+{
+    margin-top: 20px;
+    font-weight: bolder;
+    color: aquamarine;
+    font-size: 2rem;
+
+}
