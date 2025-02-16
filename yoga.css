@@ -1,59 +1,223 @@
-*{
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    font-family: 'poppins',sans-serif ;
     box-sizing: border-box;
-}
-
-body{
-    background: #080808;
-    color: #fff ;
-    
-    }
-
-h1{
-    background-color: rebeccapurple;
-    font-size: 3rem;
-}
-h2{
-    background-color: rebeccapurple;
-    font-size: 2rem;
-}
-header img{
-
+  }
+  
+  /* Body Styling with Animated Background */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to top, #a8e6cf, #dcedc1);
+    animation: gradientAnimation 10s ease infinite;
+    padding: 20px;
+    color: #333;
+    line-height: 1.6;
+    background-size: 400% 400%;
+  }
+  
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Header and Titles */
+  h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color: #2d6a4f;
+    text-transform: uppercase;
+  }
+  
+  h1 {
+    font-size: 3em;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  h2 {
+    font-size: 1.8em;
+    color: #d4a5a5;
+    font-weight: normal;
+    animation: fadeIn 3s ease-out;
+  }
+  
+  h3 {
+    font-size: 1.4em;
+    color: #1a4d2e;
+  }
+  
+  /* Animating Text */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  /* Image Styling with Hover Effects */
+  #header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-h3{
-    background-color: skyblue;
-    font-size: 2rem;
-    
-    
-}
-ul li{
-    background-color: wheat;
-    font-size: 1rem;
-    font-style: normal;
-    color: green;
-    font-weight: 1000;
-    
-}
-.Meeting{
-    background-color: red;
-    font-size: 2rem;
-    margin-bottom: 10px;
-
-}
-
-
-.link
-{
-    margin-top: 20px;
-    font-weight: bolder;
-    color: aquamarine;
-    font-size: 2rem;
-
-}
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  #header img {
+    width: 85%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  #header img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* List Styling */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  
+  ul li {
+    margin-bottom: 15px;
+    color: #555;
+    line-height: 1.8;
+    font-family: 'Georgia', serif;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  ul li:hover {
+    color: #2d6a4f;
+    transform: scale(1.05);
+  }
+  
+  /* Link Styling with Hover Animation */
+  a.link {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 30px;
+    background-color: #2d6a4f;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease-in-out;
+  }
+  
+  a.link:hover {
+    background-color: #5a8f7d;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Floating Lotus Flower */
+  #lotus {
+    position: absolute;
+    bottom: -150px;
+    left: 14%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background-image: url('Gurudev.jpg'); /* Replace with an actual lotus image */
+    background-size: cover;
+    animation: floating 6s ease-in-out infinite;
+  }
+  
+  @keyframes floating {
+    0% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-120px); }
+    100% { transform: translateX(-50%) translateY(0); }
+  }
+  
+  /* Motivational Quote Styling */
+  .quote {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: #2d6a4f;
+    text-align: center;
+    margin: 40px 0;
+    font-size: 1.6em;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    animation: slideIn 2s ease-out;
+  }
+  
+  @keyframes slideIn {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
+  .quote p {
+    margin: 0;
+  }
+  
+  /* Call to Action Button Styling */
+  .cta {
+    display: inline-block;
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px 30px;
+    background-color: #f1c40f;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
+  }
+  
+  .cta:hover {
+    background-color: #e67e22;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.4em;
+    }
+  
+    h2 {
+      font-size: 1.6em;
+    }
+  
+    #header img {
+      width: 90%;
+    }
+  
+    ul li {
+      font-size: 1.1em;
+    }
+  
+    a.link {
+      font-size: 1.3em;
+      padding: 12px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2em;
+    }
+  
+    h2 {
+      font-size: 1.4em;
+    }
+  
+    ul li {
+      font-size: 1em;
+    }
+  
+    a.link {
+      font-size: 1.1em;
+      padding: 10px 15px;
+    }
+  }
+  
