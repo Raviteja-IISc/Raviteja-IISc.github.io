@@ -3,96 +3,173 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 20px;
-    background: #f5f7fa;
+    background: linear-gradient(to right, #f5f7fa, #d0e2f7); /* Soft gradient background */
     text-align: center;
+    color: #444;
+    box-sizing: border-box;
 }
 
 /* Main Container */
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
-    padding: 20px;
-    background: pink;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    padding: 30px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Deep shadow for more depth */
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 /* Headings */
 h1 {
-    font-size: 30px;
-    color: #222;
-    margin-bottom: 15px;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for text */
 }
 
 h2 {
-    font-size: 22px;
-    color: #333;
-    border-bottom: 2px solid #007BFF;
+    font-size: 24px;
+    color: #444;
+    border-bottom: 3px solid #007BFF;
     display: inline-block;
-    padding-bottom: 5px;
+    padding-bottom: 8px;
     margin-top: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+h2:hover {
+    color: #007BFF; /* Hover effect for h2 */
+    border-color: #0056b3;
 }
 
 /* Project Grid */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    margin-top: 15px;
-    padding: 0 10px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+    padding: 0 15px;
 }
 
 /* Card Styles */
 .card {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
     text-align: left;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd; /* Light border */
+}
+
+.card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 123, 255, 0.1), rgba(0, 123, 255, 0.2));
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 0;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    background: #f0f8ff;
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background-color: #f9fbfd;
 }
 
-/* Links */
+.card:hover:before {
+    opacity: 1;
+}
+
 .card a {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 600;
     color: #007BFF;
     text-decoration: none;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
 }
 
 .card a:hover {
-    text-decoration: underline;
+    color: #0056b3;
 }
 
-/* Project Descriptions */
 .card p {
-    font-size: 14px;
-    color: #555;
+    font-size: 16px;
+    color: #666;
     margin: 0;
+    transition: color 0.3s ease;
+}
+
+.card:hover p {
+    color: #333;
+}
+
+
+.card a {
+    position: relative; /* Ensure the link is above any background or decoration */
+    z-index: 1; /* Makes sure the link is above other elements inside the card */
+}
+
+.card {
+    cursor: pointer; /* Make the entire card look clickable */
+}
+
+.card a {
+    display: block; /* Make the link take up the entire card */
+    height: 50%; /* Make the link fill the entire height of the card */
+}
+
+
+
+/* View More Button */
+button {
+    padding: 12px 20px;
+    background: #007BFF;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
-        padding: 15px;
+        padding: 20px;
     }
 
     h1 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     h2 {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .project-grid {
@@ -100,6 +177,10 @@ h2 {
     }
 
     .card {
-        padding: 12px;
+        padding: 18px;
+    }
+
+    button {
+        width: 100%; /* Make the button full width on mobile */
     }
 }

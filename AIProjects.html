@@ -6,65 +6,61 @@
     <title>AI Projects</title>
     <link rel="stylesheet" href="AI.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+    <script src="script2.js" defer></script>
 </head>
 <body>
     <div class="container">
         <h1>AI & Machine Learning Projects</h1>
 
-        <section>
-            <h2>ML from Scratch</h2>
-            <div class="project-grid">
-                <div class="card">
-                    <a href="https://medium.com/@ravihimalayanwriterml/linear-regression-from-scratch-f19230fc6590">Linear Regression from Scratch</a>
-                    <p>Implementation of Linear Regression without libraries.</p>
-                </div>
-                <div class="card">
-                    <a href="#">Logistic Regression from Scratch</a>
-                    <p>Building Logistic Regression from the ground up.</p>
-                </div>
-                <div class="card">
-                    <a href="#">KNN from Scratch</a>
-                    <p>Understanding and implementing K-Nearest Neighbors.</p>
-                </div>
-                <div class="card">
-                    <a href="#">Random Forest from Scratch</a>
-                    <p>Creating a Random Forest model manually.</p>
-                </div>
-            </div>
-        </section>
+        <nav>
+            <button onclick="showTab('ml')">Machine Learning</button>
+            <button onclick="showTab('dl')">Deep Learning</button>
+            <button onclick="showTab('gen-ai')">Gen AI</button>
+        </nav>
 
-        <section>
+        <section id="ml" class="project-section">
             <h2>Machine Learning Projects</h2>
             <div class="project-grid">
-                <div class="card"><a href="#">Linear Regression</a><p>Predicting values using regression techniques.</p></div>
+                <div class="card"><a href="https://medium.com/@ravihimalayanwriterml/linear-regression-from-scratch-f19230fc6590" >Linear Regression</a><p>Predicting values using regression techniques.</p></div>
                 <div class="card"><a href="#">Logistic Regression</a><p>Classifying data using Logistic Regression.</p></div>
                 <div class="card"><a href="#">SVM</a><p>Using Support Vector Machines for classification.</p></div>
+            </div>
+            <div id="ml-more" class="project-grid" style="display: none;">
                 <div class="card"><a href="#">Random Forest</a><p>Utilizing Random Forest for predictions.</p></div>
                 <div class="card"><a href="#">KNN</a><p>Using K-Nearest Neighbors for classification.</p></div>
                 <div class="card"><a href="#">PCA</a><p>Applying Principal Component Analysis for dimensionality reduction.</p></div>
             </div>
+            <button id="view-more-btn-ml" onclick="toggleViewMore('ml-more', 'view-more-btn-ml')">View More</button>
         </section>
 
-        <section>
+        <section id="dl" class="project-section" style="display: none;">
             <h2>Deep Learning Projects</h2>
             <div class="project-grid">
                 <div class="card"><a href="#">ANN</a><p>Artificial Neural Networks for various tasks.</p></div>
                 <div class="card"><a href="#">Face Recognition</a><p>Deep Learning-based facial recognition.</p></div>
                 <div class="card"><a href="#">Object Detection</a><p>Detecting objects in images using CNNs.</p></div>
-                <div class="card"><a href="#">RNN</a><p>Recurrent Neural Networks for sequential data.</p></div>
-                <div class="card"><a href="#">ChatBot</a><p>Building an AI-powered ChatBot.</p></div>
-                <div class="card"><a href="#">IoT</a><p>Integrating AI with IoT applications.</p></div>
             </div>
+            <div id="dl-more" class="project-grid" style="display: none;">
+                <div class="card"><a href="#">LSTM</a><p>Using LSTMs for sequential data analysis.</p></div>
+                <div class="card"><a href="#">GAN</a><p>Generative Adversarial Networks for generating data.</p></div>
+                <div class="card"><a href="#">Reinforcement Learning</a><p>Learning optimal actions through reinforcement learning.</p></div>
+            </div>
+            <button id="view-more-btn-dl" onclick="toggleViewMore('dl-more', 'view-more-btn-dl')">View More</button>
         </section>
 
-        <section>
+        <section id="gen-ai" class="project-section" style="display: none;">
             <h2>Gen AI Projects</h2>
             <div class="project-grid">
                 <div class="card"><a href="#">FOOD APP</a><p>AI-powered food recommendation system.</p></div>
                 <div class="card"><a href="#">TEXT Summarizer</a><p>Summarizing large texts using NLP.</p></div>
                 <div class="card"><a href="#">Video Summarizer</a><p>Generating concise summaries from videos.</p></div>
             </div>
+            <div id="gen-ai-more" class="project-grid" style="display: none;">
+                <div class="card"><a href="#">Chatbot</a><p>Building an AI-powered chatbot.</p></div>
+                <div class="card"><a href="#">AI Art Generator</a><p>Generating art using AI algorithms.</p></div>
+                <div class="card"><a href="#">AI Music Composer</a><p>Composing music using AI models.</p></div>
+            </div>
+            <button id="view-more-btn-gen-ai" onclick="toggleViewMore('gen-ai-more', 'view-more-btn-gen-ai')">View More</button>
         </section>
     </div>
 </body>

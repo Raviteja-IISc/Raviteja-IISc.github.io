@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novels, Blogs, and Book Reviews</title>
+  <link rel="stylesheet" href="write.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#novels">Novels</a></li>
+      <li><a href="#blogs">Blogs</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="container">
+    <header>
+      <h1>Novels, Blogs, and Book Reviews</h1>
+    </header>
+
+    <!-- Novels Section -->
+    <section id="novels" class="novels">
+      <h2>Novels</h2>
+      <div class="card">
+        <ul class="novel-list">
+          <li>
+            <span class="novel-title">1. Once upon a time in the 90s</span>
+            <a href="https://www.amazon.in/Once-upon-time-Ravi-Teja-ebook/dp/B0CGYZBNXS/ref=sr_1_1?crid=2STVRRRZCGE58&dib=eyJ2IjoiMSJ9.qTAyv-lXGqnEPRtualuno3NqQCB78TIuXkjoxgJCgAXEGPOmL-pvKRiwhny52v9ekm-l4Ewkk_Xbg2UZ2BFw5Q.heZlF2rKqNMJKa0G1Smx5R3AAbEphL6T7F7_EwNgTEc&dib_tag=se&keywords=once+upon+a+time+in+the+90s&qid=1739679364&sprefix=once+upon+a+time+in+the+90%2Caps%2C297&sr=8-1" target="_blank" class="amazon-link">Amazon link</a>
+          </li>
+          <li>
+            <span class="novel-title">2. Lost in the flakes</span>
+            <a href="https://www.amazon.in/Lost-Flakes-Rabiya-Nooreen/dp/B09JZ89SDS" target="_blank" class="amazon-link">Amazon link</a>
+          </li>
+          <li class="extra-novels">
+            <span class="novel-title">3. Pahari Delights - Coming Soon 2025</span>
+            <a href="https://www.amazon.com" target="_blank" class="amazon-link">Amazon link</a>
+          </li>
+        </ul>
+        <button class="view-more" onclick="toggleVisibility('novels')">View More</button>
+      </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section id="blogs" class="blogs">
+      <h2>My Blogs</h2>
+      <div class="card">
+        <ul class="blog-list">
+          <li><a href="https://myblog.com" target="_blank" class="blog-link">Blog Post 1</a></li>
+          <li><a href="https://myblog.com" target="_blank" class="blog-link">Blog Post 2</a></li>
+          <li class="extra-blogs">
+            <a href="https://myblog.com" target="_blank" class="blog-link">Blog Post 3</a>
+          </li>
+          <li class="extra-blogs">
+            <a href="https://myblog.com" target="_blank" class="blog-link">Blog Post 4</a>
+          </li>
+        </ul>
+        <button class="view-more" onclick="toggleVisibility('blogs')">View More</button>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+      <h2>My Book Reviews</h2>
+      <div class="card">
+        <ul class="review-list">
+          <li><a href="https://mybookreviews.com" target="_blank" class="review-link">Review of "Once upon a time in the 90s"</a></li>
+          <li><a href="https://mybookreviews.com" target="_blank" class="review-link">Review of "Lost in the flakes"</a></li>
+          <li class="extra-reviews">
+            <a href="https://mybookreviews.com" target="_blank" class="review-link">Review of "A Journey to the Moon"</a>
+          </li>
+          <li class="extra-reviews">
+            <a href="https://mybookreviews.com" target="_blank" class="review-link">Review of "The Last Star"</a>
+          </li>
+        </ul>
+        <button class="view-more" onclick="toggleVisibility('reviews')">View More</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
