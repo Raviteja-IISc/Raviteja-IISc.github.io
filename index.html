@@ -1,429 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AR Power Solutions</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chatbot.css">
+    <script src="https://kit.fontawesome.com/f1987610ee.js" crossorigin="anonymous"></script>
 <body>
-
-<!-- ===== NOISE OVERLAY ===== -->
-<div class="noise"></div>
-
-<!-- ===== CURSOR ===== -->
-<div class="cursor" id="cursor"></div>
-<div class="cursor-follower" id="cursor-follower"></div>
-
-<!-- ===== NAV ===== -->
-<nav id="navbar">
-  <div class="nav-inner">
-    <div class="logo-mark">
-      <span class="logo-icon">⚡</span>
-      <span class="logo-text">AR <em>Power</em></span>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Electrical and Machine Learning Engineer, Writer, and Yoga Teacher</p>
+            <h1>Hi, I'm <span>Ravi</span> <br> from India</h1> 
+        </div>    
     </div>
-    <ul class="nav-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button class="nav-cta">Get in Touch</button>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobile-menu">
-  <ul>
-    <li><a href="#hero" class="mobile-link">Home</a></li>
-    <li><a href="#about" class="mobile-link">About</a></li>
-    <li><a href="#services" class="mobile-link">Services</a></li>
-    <li><a href="#projects" class="mobile-link">Projects</a></li>
-    <li><a href="#contact" class="mobile-link">Contact</a></li>
-  </ul>
 </div>
 
-<!-- ===== HERO ===== -->
-<section id="hero">
-  <div class="hero-bg">
-    <div class="hero-grid"></div>
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-  </div>
 
-  <div class="hero-content">
-    <div class="hero-badge reveal">
-      <span class="badge-dot"></span>
-      Solar · PCB Design · IoT · Yoga &amp; Wellness
-    </div>
-    <h1 class="hero-title reveal">
-      Engineering<br>
-      <span class="gradient-text">Sustainable</span><br>
-      <span class="outline-text">Futures</span>
-    </h1>
-    <p class="hero-sub reveal">
-      Where precision engineering meets conscious living.<br>
-      AR Power Solutions delivers smart energy and technology — built to last.
-    </p>
-    <div class="hero-actions reveal">
-      <a href="#services" class="btn-primary">Explore Services</a>
-      <a href="#projects" class="btn-ghost">View Projects ↗</a>
-    </div>
-  </div>
+<!--......about..........-->
 
-  <div class="hero-stats reveal">
-    <div class="stat">
-      <span class="stat-num">120+</span>
-      <span class="stat-label">Solar Installations</span>
-    </div>
-    <div class="stat-divider"></div>
-    <div class="stat">
-      <span class="stat-num">85+</span>
-      <span class="stat-label">PCB Projects</span>
-    </div>
-    <div class="stat-divider"></div>
-    <div class="stat">
-      <span class="stat-num">40+</span>
-      <span class="stat-label">IoT Deployments</span>
-    </div>
-    <div class="stat-divider"></div>
-    <div class="stat">
-      <span class="stat-num">500+</span>
-      <span class="stat-label">Wellness Sessions</span>
-    </div>
-  </div>
-
-  <div class="scroll-hint">
-    <div class="scroll-line"></div>
-    <span>Scroll</span>
-  </div>
-</section>
-
-<!-- ===== ABOUT ===== -->
-<section id="about">
-  <div class="section-inner">
-    <div class="about-label reveal">Who we are</div>
-
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <h2 class="section-title">A team that<br>builds with <span class="accent">purpose</span></h2>
-        <p>AR Power Solutions is a multidisciplinary company at the crossroads of sustainable energy, precision electronics, and human well-being. We believe technology should serve both the planet and the people on it.</p>
-        <p>From solar PV system design and PCB engineering to IoT automation and yoga wellness programs — we bring deep expertise and genuine care to every project.</p>
-        <div class="about-tags">
-          <span>ISO Certified</span>
-          <span>Since 2018</span>
-          <span>Pan-India</span>
-          <span>End-to-End</span>
-        </div>
-      </div>
-
-      <div class="about-visual reveal">
-        <div class="about-image-wrap">
-          <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=600&q=80" alt="Solar panels" loading="lazy">
-          <div class="about-card-float">
-            <div class="float-icon">☀️</div>
-            <div>
-              <strong>Green Energy First</strong>
-              <p>Every solution is designed with sustainability at its core.</p>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/Ravi.jpg">
             </div>
-          </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I’m a yoga teacher who loves writing fiction and self-help books. I also work as an Electrical and Machine Learning Engineer, sharing insights through blogs on the latest in AI. My passion lies in blending wellness, creativity, and technology to inspire others. </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>AI/ML</span><br>Designing AI ML Web applications</li>
+                        <li><span>Embedded Systems</span><br>AI ML on Edge devices</li>
+                        <li><span>AI in reliability</span><br>AI ML in reliability engineering</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Product Engineer</span><br>BorgWarner</li>
+                        <li><span>Research Engineer</span><br>Eaton</li>
+                        <li><span>Electrical Engineer</span><br>ExxonMobil</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Master's in AI</span><br>Woolf</li>
+                        <li><span>MTECH in Electrical Engineering</span><br>IISc</li>
+                        <li><span>BTECH in Electrical Engineering</span><br>NITW</li>
+                    </ul>
+                </div>
+
+
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
+     
+<!--......Services..........-->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>Freelance services in AI and ML/Power Electronics</h2>
+                <p> I am an EE with a passion to solve problems using AI. </p>
+                <a href="https://www.youtube.com/@EDGEML-WITHRAVI">learn more</a>
+            </div>
+            <div>
+                <i class="fas fa-pen"></i>
+                <h2>Writing </h2>
+                <p> I write about yoga, fiction, and self-mastery.Drop a message in the chat for collaboration.</p>
+                <a href="writing.html">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-om"></i>
+                <h2>Yoga</h2>
+                <p> I am also a passionate yoga teacher at Sri Sri School of Yoga. Here is the link to regsiter for my yoga classes.</p>
+                <a href="Yoga.html">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--......Portfolio..........-->
+ 
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>   
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png"> 
+                <div class="layer">
+                    <h3>Machine Learning and Deep Learning projects</h3>
+                    <P>My projects in AI.</P>
+                    <a href="AIProjects.html"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Novel.jpg"> 
+                <div class="layer">
+                    <h3>Writing</h3>
+                    <P>My publications.</P>
+                    <a href="writing.html"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Kakasana.png"> 
+                <div class="layer">
+                    <h3>Yoga classes</h3>
+                    <P>Link to my yoga classes and videos.</P>
+                    <a href="https://www.youtube.com/@KarishmaticZenYog"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <a ref="#" class="btn">See more</a>
+    </div>
+</div>
+
+<!--......Contact..........-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>raviteja@alum.iisc.ac.in</p>
+                <P><i class="fa-solid fa-phone"></i>+65-85117912</P>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/ravi-teja-b20bbb13a/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/RavitejaCV.pdf" download class="btn btn2"> Download CV</a>
+            </div>            
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2 ">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ Ravi <i class="fa-solid fa-heart"></i> SriSriSchoolOfYoga</p>
+    </div>
+</div>
+
+<!--  Chatbot Section  -->
+<section id="chatbot" class="project-section">
+    <h2>Chat with our AI</h2>
+    <!-- Embed Streamlit Chatbot using iframe -->
+    <iframe src="http://localhost:8501" width="100%" height="500px" frameborder="0"></iframe>
 </section>
 
-<!-- ===== SERVICES ===== -->
-<section id="services">
-  <div class="section-inner">
-    <div class="section-label reveal">What we do</div>
-    <h2 class="section-title reveal">Our <span class="accent">Services</span></h2>
-    <p class="section-sub reveal">Four verticals. One vision. Zero compromise.</p>
 
-    <div class="services-grid">
-
-      <div class="service-card reveal" data-index="0">
-        <div class="service-number">01</div>
-        <div class="service-icon">☀️</div>
-        <h3>Solar PV Design</h3>
-        <p>Residential, commercial, and industrial solar energy system design, simulation, and end-to-end consulting.</p>
-        <ul class="service-list">
-          <li>Load analysis & sizing</li>
-          <li>Grid-tied & off-grid systems</li>
-          <li>AutoCAD & PVsyst design</li>
-        </ul>
-        <a href="#contact" class="service-arrow">Learn More →</a>
-      </div>
-
-      <div class="service-card reveal" data-index="1">
-        <div class="service-number">02</div>
-        <div class="service-icon">🔬</div>
-        <h3>PCB Design</h3>
-        <p>Schematic design, multi-layer PCB layout, prototyping, DFM review, and embedded hardware development.</p>
-        <ul class="service-list">
-          <li>Altium & KiCad design</li>
-          <li>Prototype to production</li>
-          <li>RF, power & mixed-signal</li>
-        </ul>
-        <a href="#contact" class="service-arrow">Learn More →</a>
-      </div>
-
-      <div class="service-card reveal" data-index="2">
-        <div class="service-number">03</div>
-        <div class="service-icon">📡</div>
-        <h3>IoT Solutions</h3>
-        <p>Smart monitoring systems, industrial automation, and cloud-connected devices built on reliable platforms.</p>
-        <ul class="service-list">
-          <li>ESP32 / Raspberry Pi builds</li>
-          <li>MQTT & cloud dashboards</li>
-          <li>Predictive maintenance</li>
-        </ul>
-        <a href="#contact" class="service-arrow">Learn More →</a>
-      </div>
-
-      <div class="service-card reveal" data-index="3">
-        <div class="service-number">04</div>
-        <div class="service-icon">🧘</div>
-        <h3>Yoga &amp; Wellness</h3>
-        <p>Online and offline yoga classes, guided meditation, and corporate wellness programs tailored to teams.</p>
-        <ul class="service-list">
-          <li>1-on-1 &amp; group sessions</li>
-          <li>Corporate packages</li>
-          <li>Mindfulness workshops</li>
-        </ul>
-        <a href="Yoga.html" class="service-arrow">Learn More →</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== PROJECTS ===== -->
-<section id="projects">
-  <div class="section-inner">
-    <div class="section-label reveal">Our work</div>
-    <h2 class="section-title reveal">Featured <span class="accent">Projects</span></h2>
-
-    <div class="projects-grid">
-
-      <div class="project-card large reveal">
-        <div class="project-img">
-          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80" alt="Solar installation" loading="lazy">
-        </div>
-        <div class="project-info">
-          <span class="project-tag">Solar PV</span>
-          <h3>50kW Commercial Rooftop Installation</h3>
-          <p>End-to-end design and installation for a textile manufacturer in Coimbatore.</p>
-          <a href="#contact" class="project-link">View Details ↗</a>
-        </div>
-      </div>
-
-      <div class="project-card reveal">
-        <div class="project-img">
-          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="PCB design" loading="lazy">
-        </div>
-        <div class="project-info">
-          <span class="project-tag">PCB Design</span>
-          <h3>Industrial Motor Controller</h3>
-          <p>6-layer mixed-signal board with CAN bus interface.</p>
-          <a href="#contact" class="project-link">View Details ↗</a>
-        </div>
-      </div>
-
-      <div class="project-card reveal">
-        <div class="project-img">
-          <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=600&q=80" alt="IoT system" loading="lazy">
-        </div>
-        <div class="project-info">
-          <span class="project-tag">IoT</span>
-          <h3>Smart Energy Monitor</h3>
-          <p>Real-time grid monitoring with predictive alerts and mobile dashboard.</p>
-          <a href="#contact" class="project-link">View Details ↗</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== CONTACT ===== -->
-<section id="contact">
-  <div class="section-inner">
-    <div class="section-label reveal">Let's talk</div>
-    <h2 class="section-title reveal">Start a <span class="accent">Conversation</span></h2>
-
-    <div class="contact-grid">
-
-      <div class="contact-info reveal">
-        <p class="contact-intro">Whether you need a solar system designed, a PCB built, an IoT platform deployed — or simply want to start a wellness journey — we'd love to hear from you.</p>
-
-        <div class="contact-item">
-          <div class="contact-icon">✉</div>
-          <div>
-            <strong>Email</strong>
-            <a href="mailto:info@arpowersolutions.com">info@arpowersolutions.com</a>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">📞</div>
-          <div>
-            <strong>Phone</strong>
-            <a href="tel:+91XXXXXXXXXX">+91-XXXXXXXXXX</a>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">📍</div>
-          <div>
-            <strong>Location</strong>
-            <span>India (Pan-India Services)</span>
-          </div>
-        </div>
-
-        <div class="social-row">
-          <a href="#" aria-label="LinkedIn" class="social-btn">in</a>
-          <a href="#" aria-label="Twitter" class="social-btn">𝕏</a>
-          <a href="#" aria-label="Instagram" class="social-btn">◎</a>
-        </div>
-      </div>
-
-      <form class="contact-form reveal" id="contactForm">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" placeholder="Arjun Rao" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="you@example.com" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="service">Service Interested In</label>
-          <select id="service">
-            <option value="">Select a service…</option>
-            <option>Solar PV Design</option>
-            <option>PCB Design</option>
-            <option>IoT Solutions</option>
-            <option>Yoga &amp; Wellness</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" rows="5" placeholder="Tell us about your project…" required></textarea>
-        </div>
-        <button type="submit" class="btn-primary btn-full">Send Message →</button>
-        <span id="form-msg"></span>
-      </form>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== AI ASSISTANT ===== -->
-<section id="chatbot">
-  <div class="section-inner">
-    <div class="section-label reveal">AI Powered</div>
-    <h2 class="section-title reveal">Ask Our <span class="accent">Assistant</span></h2>
-    <p class="section-sub reveal">Get instant answers about our services, solar sizing, PCB specs, or wellness programs.</p>
-    <div class="chatbot-frame reveal">
-      <iframe src="http://localhost:8501" title="AR Power AI Assistant"></iframe>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-logo">
-      <span class="logo-icon">⚡</span>
-      <span class="logo-text">AR <em>Power</em> Solutions</span>
-    </div>
-    <p class="footer-tagline">Engineering Sustainable Energy &amp; Smart Technology</p>
-    <div class="footer-links">
-      <a href="#hero">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 AR Power Solutions</span>
-      <span>Solar · PCB · IoT · Yoga</span>
-    </div>
-  </div>
-</footer>
 
 <script>
-// ---- Custom cursor ----
-const cursor = document.getElementById('cursor');
-const follower = document.getElementById('cursor-follower');
-document.addEventListener('mousemove', e => {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top = e.clientY + 'px';
-  setTimeout(() => {
-    follower.style.left = e.clientX + 'px';
-    follower.style.top = e.clientY + 'px';
-  }, 80);
-});
-document.querySelectorAll('a, button, .service-card, .project-card').forEach(el => {
-  el.addEventListener('mouseenter', () => { cursor.classList.add('hovered'); follower.classList.add('hovered'); });
-  el.addEventListener('mouseleave', () => { cursor.classList.remove('hovered'); follower.classList.remove('hovered'); });
-});
-
-// ---- Navbar scroll ----
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 60);
-});
-
-// ---- Hamburger ----
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobile-menu');
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
-  mobileMenu.classList.toggle('open');
-});
-document.querySelectorAll('.mobile-link').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    mobileMenu.classList.remove('open');
-  });
-});
-
-// ---- Scroll reveal ----
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      const card = entry.target;
-      const delay = card.dataset.index ? parseInt(card.dataset.index) * 100 : 0;
-      setTimeout(() => card.classList.add('visible'), delay);
-      observer.unobserve(card);
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
     }
-  });
-}, { threshold: 0.12 });
-reveals.forEach(el => observer.observe(el));
-
-// ---- Contact form ----
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const msg = document.getElementById('form-msg');
-  msg.textContent = '✓ Message sent! We\'ll get back to you shortly.';
-  msg.style.color = '#00ff99';
-  this.reset();
-  setTimeout(() => msg.textContent = '', 5000);
-});
 </script>
+
+<script>
+
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzReCnXDo7krBm81bLIa-y5HS4A2BjKojpJBVT57Th1kn9JcrXjg6aCSJVOASgzbt7vow/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent succesfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        
+        })
+    .catch(error=>console.error("Error!",error.message))
+})
+  
+</script>
+
+
 </body>
 </html>
